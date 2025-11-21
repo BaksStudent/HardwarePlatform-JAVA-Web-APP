@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>View All Items - Hardware Shop</title>
+    <link rel="stylesheet" href="css/hardware.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="home.html">Home</a>
+            <a href="view-items.html">View Items</a>
+            <a href="buy-item.html">Buy Items</a>
+            <a href="view-cart.html">View Cart</a>
+        </div>
+        <div class="nav-right">
+            <form action="search-items.html" method="get" class="search-form">
+                <input type="text" name="query" placeholder="Search items..." required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <h2>All Available Items</h2>
+    <table border="1" cellpadding="10" cellspacing="0" style="margin: auto; background-color: #fff;">
+        <thead>
+            <tr style="background-color: #3498db; color: white;">
+                <th>Item ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price (R)</th>
+                <th>Buy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- These rows would normally be generated dynamically from the servlet -->
+            <tr>
+                <td>101</td>
+                <td>Hammer</td>
+                <td>Steel handle hammer</td>
+                <td>120.00</td>
+                <td><a href="buy.html?itemId=101">Buy</a></td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Screwdriver</td>
+                <td>Phillips head screwdriver</td>
+                <td>55.00</td>
+                <td><a href="buy.html?itemId=102">Buy</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="text-align: center; margin-top: 20px;"><a href="home.html">Back to Home</a></p>
+</body>
+</html>

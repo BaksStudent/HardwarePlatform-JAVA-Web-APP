@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Item - Hardware Shop</title>
+    <link rel="stylesheet" href="css/hardware.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="home.html">Home</a>
+            <a href="view-items.html">View Items</a>
+            <a href="buy-item.html">Buy Items</a>
+            <a href="view-cart.html">View Cart</a>
+        </div>
+        <div class="nav-right">
+            <form action="search-items.html" method="get" class="search-form">
+                <input type="text" name="query" placeholder="Search items..." required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <h2>Buy Item</h2>
+    <form action="BuyItemsServlet" method="post">
+        <label>Item ID:</label>
+        <input type="text" name="itemId" readonly value="<!-- Value filled dynamically -->" required>
+
+        <label>Item Name:</label>
+        <input type="text" name="itemName" readonly value="<!-- Value filled dynamically -->">
+
+        <label>Price:</label>
+        <input type="text" name="price" readonly value="<!-- Value filled dynamically -->">
+
+        <label>Quantity:</label>
+        <input type="number" name="quantity" min="1" value="1" required>
+
+        <input type="submit" value="Add to Cart">
+    </form>
+
+    <p style="text-align: center; margin-top: 20px;"><a href="view-all.html">Back to Items</a></p>
+</body>
+</html>

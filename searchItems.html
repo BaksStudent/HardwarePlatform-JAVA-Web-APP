@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Items</title>
+    <link rel="stylesheet" href="css/hardwareItems.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="home.html">Home</a>
+            <a href="view-items.html">View Items</a>
+            <a href="buy-item.html">Buy Items</a>
+            <a href="view-cart.html">View Cart</a>
+        </div>
+        <div class="nav-right">
+            <form action="search-items.html" method="get" class="search-form">
+                <input type="text" name="query" placeholder="Search items..." required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <h2>Search Items</h2>
+    <form action="SearchItemsServlet" method="get">
+        <label for="query">Enter keyword:</label>
+        <input type="text" id="query" name="query" required>
+        <input type="submit" value="Search">
+    </form>
+
+    <div id="results">
+        
+    </div>
+
+    <br>
+    <a href="home.html">Back to Home</a>
+     <script>
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+            const term = params.get("query");
+            if (term) {
+                document.getElementById("search-term").textContent = `You searched for: "${term}"`;
+            }
+        }
+    </script>
+</body>
+</html>
